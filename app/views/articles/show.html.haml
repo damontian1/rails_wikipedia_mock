@@ -1,0 +1,8 @@
+%h1= @article.title
+= @article.content
+
+%br
+%br
+= link_to "Back", root_path
+= link_to "Edit", edit_article_path
+= link_to "Delete", article_path, method: :destroy, data: {confirm: "are you sure?"}
