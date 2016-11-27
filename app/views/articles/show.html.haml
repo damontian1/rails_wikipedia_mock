@@ -1,8 +1,7 @@
 %h1= @article.title
 = @article.content
 
-%br
-%br
-= link_to "Back", root_path
-= link_to "Edit", edit_article_path
-= link_to "Delete", article_path, method: :destroy, data: {confirm: "are you sure?"}
+.btn-group
+	= link_to "Back", root_path, class: "btn btn-default"
+	= link_to "Edit", edit_article_path, class: "btn btn-default"
+	= link_to "Delete", article_path, method: :destroy, data: {confirm: "are you sure?"}, class: "btn btn-default"

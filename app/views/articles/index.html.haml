@@ -1,11 +1,14 @@
-- @articles.each do |article|
-	%h2= link_to article.title, article
-	%p 
-		Published at:
-		= article.created_at.strftime("%b %d, %Y") 
-	%p= truncate(article.content, length: 200) 
-
-%br
-
-- if user_signed_in?
-	= link_to "New Article", new_article_path
+- if !@articles.blank?
+	- @articles.each do |article|
+		%h2= link_to article.title, article
+		%p 
+			Published at:
+			= article.created_at.strftime("%b %d, %Y") 
+		%p= truncate(article.content, length: 200) 
+- else
+	%h2.blue1 No Articles Availble
+	%p
+		Click 
+		= link_to "here", new_article_path
+		to add new article
+		

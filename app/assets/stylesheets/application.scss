@@ -15,3 +15,9 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+$blue1: #337ab7;
+
+.blue1 {
+	color: $blue1
+}
